@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Results">
+
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="309dp"
+        android:layout_height="189dp"
+        android:layout_marginBottom="192dp"
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/stayHealthyText"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_white_background"
+            android:padding="10dp"
+            android:text="Stay healthy"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cleanEatingText"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_white_background"
+            android:padding="10dp"
+            android:text="Clean Eating"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stayHealthyText" />
+
+        <TextView
+            android:id="@+id/caloricIntakeText"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_white_background"
+            android:padding="10dp"
+            android:text="2262 kcal"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cleanEatingText" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="169dp"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toTopOf="@+id/loginContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/triviaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESULTS"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/loginContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="169dp"
+        android:layout_height="69dp"
+        android:background="@drawable/gradient_background"
+        android:backgroundTint="#00FFFFFF"
+        android:text="Start your \n NUTRI-DREAM \n journey !"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorLink="#00FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginContainer"
+        app:layout_constraintVertical_bias="0.1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

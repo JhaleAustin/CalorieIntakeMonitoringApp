@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".progress1">
+    tools:context=".progress">
 
+
+    <!--        android:style="?android:attr/progressBarStyleHorizontal"-->
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView3"
         android:layout_width="96dp"
         android:layout_height="95dp"
 
@@ -18,42 +20,41 @@
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UnknownIdInLayout"
+        tools:srcCompat="@drawable/ic_launcher_background" />
 
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="264dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="180dp"
+        android:progress="20"
 
-       <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="264dp"
-            android:layout_height="26dp"
-            android:layout_marginTop="180dp"
-            android:progress="20"
-            android:progressDrawable="@drawable/progress_gradient"
-            app:layout_constraintBottom_toTopOf="@id/Container"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.542"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+        android:progressDrawable="@drawable/progress_gradient"
+        app:layout_constraintBottom_toTopOf="@id/Container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.068"
-           />
-    <!--            android:style="?android:attr/progressBarStyleHorizontal"-->
-
+        app:layout_constraintVertical_bias="0.068" />
 
     <LinearLayout
         android:id="@+id/Container"
-        android:layout_width="309dp"
-        android:layout_height="199dp"
+        android:layout_width="308dp"
+        android:layout_height="201dp"
         android:layout_marginBottom="292dp"
         android:background="@drawable/gradient_background"
         android:orientation="vertical"
         android:padding="10dp"
 
-        android:visibility="invisible"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="1.0">
 
         <!-- Username Input Field -->
 
@@ -88,8 +89,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:backgroundTint="#00FFFFFF"
-            android:text="NEXT"
+            android:minHeight="48dp"
 
+            android:text="NEXT"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="16sp"
@@ -97,6 +99,7 @@
 
 
     </LinearLayout>
+
 
 
     <LinearLayout
@@ -107,7 +110,6 @@
         android:background="@drawable/gradient_background"
         android:orientation="vertical"
         android:padding="10dp"
-        android:visibility="invisible"
 
         app:layout_constraintVertical_bias="0.55"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -127,7 +129,7 @@
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-          app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/progressBar" />
 
@@ -180,7 +182,7 @@
         android:background="@drawable/gradient_background"
         android:orientation="vertical"
         android:padding="10dp"
-        android:visibility="invisible"
+
 
         app:layout_constraintVertical_bias="0.55"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -215,7 +217,8 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="DuplicateClickableBoundsCheck" />
 
         <Button
             android:id="@+id/Button5"
@@ -227,7 +230,8 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="DuplicateClickableBoundsCheck" />
 
         <Button
             android:id="@+id/Button6"
@@ -239,7 +243,8 @@
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="DuplicateClickableBoundsCheck" />
 
 
     </LinearLayout>
@@ -253,7 +258,6 @@
         android:background="@drawable/gradient_background"
         android:orientation="vertical"
         android:padding="10dp"
-        android:visibility="invisible"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -328,17 +332,14 @@
 
 
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/Container5"
         android:layout_width="311dp"
-        android:layout_height="184dp"
+        android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/gradient_background"
         android:orientation="vertical"
         android:padding="10dp"
-        android:visibility="invisible"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -403,6 +404,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:backgroundTint="#00FFFFFF"
+            android:minHeight="48dp"
             android:text="Done"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
@@ -414,13 +416,12 @@
 
     <LinearLayout
         android:id="@+id/Container6"
-        android:layout_width="350dp"
-        android:layout_height="182dp"
+        android:layout_width="346dp"
+        android:layout_height="205dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/gradient_background"
         android:orientation="vertical"
         android:padding="10dp"
-        android:visibility="invisible"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -483,7 +484,7 @@
         <Button
             android:id="@+id/button12"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="75dp"
             android:layout_marginTop="16dp"
             android:backgroundTint="#00FFFFFF"
             android:text="Done"
@@ -495,5 +496,145 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/Container7"
+        android:layout_width="321dp"
+        android:layout_height="355dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical"
+        android:padding="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65">
+
+        <!-- Username Input Field -->
+
+        <TextView
+            android:id="@+id/Label8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Choose your diet"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            tools:ignore="DuplicateIds" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Button13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Vegetarian Diet"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Button14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Energetic Diet"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Button15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Low-carb Diet"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:minHeight="48dp"
+                android:text="Clean Eating "
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Clean Eating "
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Monitoring Diet "
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Ketogenic Diet "
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:text="Pescetarian Diet "
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

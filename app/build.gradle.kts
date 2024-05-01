@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.example.calorieintakemonitoringapp"
-    compileSdk = 34
+     compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.calorieintakemonitoringapp"
-        minSdk = 34
-        targetSdk = 34
+        minSdk = 33
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 

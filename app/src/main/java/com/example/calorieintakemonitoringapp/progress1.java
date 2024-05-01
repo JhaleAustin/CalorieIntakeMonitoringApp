@@ -26,9 +26,9 @@ public class progress1 extends AppCompatActivity {
 
         nextButton = findViewById(R.id.nextButton);
         usernameLabel = findViewById(R.id.usernameLabel);
-        nameEditText = findViewById(R.id.nameEditText);
-        Container = findViewById(R.id.Container);
+            Container = findViewById(R.id.Container);
         Container2 = findViewById(R.id.Container2);
+        nameEditText= findViewById(R.id.nameEditText);
         ProgressBar = findViewById(R.id.progressBar);
          Button1 = findViewById(R.id.Button1);
         Button2 = findViewById(R.id.Button2);
@@ -46,7 +46,7 @@ public class progress1 extends AppCompatActivity {
 
         Container6 = findViewById(R.id.Container6);
 
-        Container7 = findViewById(R.id.Container7);
+//        Container7 = findViewById(R.id.Container7);
 
         nextButton.setVisibility(View.VISIBLE);
 
