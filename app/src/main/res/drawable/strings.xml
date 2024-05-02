@@ -1,0 +1,8 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array android:name="gain_weight_male_active_vegetarian_diet">
+        <item>Tofu Sisig: Approximately 200-250 calories per serving.</item>
+        <item>Vegetable Bicol Express: Approximately 150-200 calories per serving.</item>
+        <item>Quinoa Salad with Chickpeas, Avocado, and Mixed Greens: Approximately 300-400 calories per serving.</item>
+    </string-array>
+    <!-- Add other string arrays for different combinations here -->
+</resources>

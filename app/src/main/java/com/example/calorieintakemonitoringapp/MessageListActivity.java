@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,9 +23,12 @@ public class MessageListActivity extends AppCompatActivity {
 
         // Populate message list with sample data
         messageList = new ArrayList<>();
-        messageList.add(new Message("John", "Hey, how are you?", "2024-05-01", "10:00 AM"));
-        messageList.add(new Message("Alice", "I'm good, thanks!", "2024-05-01", "10:05 AM"));
-        // Add more messages...
+        // Messages from John
+        messageList.add(new Message("John", "Hey, do you want to go to the gym later?", "2024-05-01", "10:00 AM"));
+        // Messages from Lisa
+        messageList.add(new Message("Lisa", "Hi there! How about grabbing lunch tomorrow?", "2024-05-01", "11:00 AM"));
+        // Messages from Crisa
+        messageList.add(new Message("Crisa", "Hello! Are you free for a movie tonight?", "2024-05-01", "12:00 PM"));
 
         // Set up adapter
         MessageListAdapter adapter = new MessageListAdapter(this, messageList);
@@ -40,12 +41,9 @@ public class MessageListActivity extends AppCompatActivity {
                 // Get the clicked message
                 Message clickedMessage = messageList.get(position);
 
-                // Navigate to conversation activity, passing relevant data
+                // Navigate to conversation activity, passing the clicked message
                 Intent intent = new Intent(MessageListActivity.this, ConversationActivity.class);
-                intent.putExtra("sender", clickedMessage.getSender());
-                intent.putExtra("content", clickedMessage.getContent());
-                intent.putExtra("date", clickedMessage.getDate());
-                intent.putExtra("time", clickedMessage.getTime());
+                intent.putExtra("clickedMessage", clickedMessage);
                 startActivity(intent);
             }
         });

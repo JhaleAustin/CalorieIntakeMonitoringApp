@@ -36,7 +36,7 @@ public class Main extends AppCompatActivity {
 //                Container.setVisibility(View.INVISIBLE);
 //                Container2.setVisibility(View.VISIBLE);
 
-                Intent intent = new Intent(Main.this, FoodRecommendation.class);
+                Intent intent = new Intent(Main.this, WorkoutRecommendation.class);
                 startActivity(intent);
             }
         });

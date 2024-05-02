@@ -14,6 +14,9 @@ public class progress extends AppCompatActivity {
     ProgressBar progressBar;
     LinearLayout Container, Container2, Container3, Container4, Container5, Container6, Container7;
 
+    private String yourGoal,gender,active,diet;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,6 +88,7 @@ public class progress extends AppCompatActivity {
                 Container3.setVisibility(View.VISIBLE);
 //                Intent intent = new Intent(progress.this, Main.class);
 //           startActivity(intent);
+                yourGoal="Gain Wieght";
 //
             }
         });
@@ -94,7 +98,7 @@ public class progress extends AppCompatActivity {
             public void onClick(View v) {
                 Container2.setVisibility(View.INVISIBLE);
                 Container3.setVisibility(View.VISIBLE);
-
+                yourGoal="Stay Healthy";
             }
         });
 
@@ -103,7 +107,7 @@ public class progress extends AppCompatActivity {
             public void onClick(View v) {
                 Container2.setVisibility(View.INVISIBLE);
                 Container3.setVisibility(View.VISIBLE);
-
+                yourGoal="Loss Wieght";
             }
         });
 //
@@ -112,7 +116,7 @@ public class progress extends AppCompatActivity {
             public void onClick(View v) {
                 Container3.setVisibility(View.INVISIBLE);
                 Container4.setVisibility(View.VISIBLE);
-
+                gender="Female";
             }
         });
 
@@ -121,7 +125,7 @@ public class progress extends AppCompatActivity {
             public void onClick(View v) {
                 Container3.setVisibility(View.INVISIBLE);
                 Container4.setVisibility(View.VISIBLE);
-
+                gender="Male";
             }
         });
 
@@ -141,7 +145,7 @@ public class progress extends AppCompatActivity {
             public void onClick(View v) {
                 Container4.setVisibility(View.INVISIBLE);
                 Container5.setVisibility(View.VISIBLE);
-
+active="Little or No Experience";
             }
         });
 
@@ -150,7 +154,7 @@ public class progress extends AppCompatActivity {
             public void onClick(View v) {
                 Container4.setVisibility(View.INVISIBLE);
                 Container5.setVisibility(View.VISIBLE);
-
+                active="Lightly Active";
             }
         });
 
@@ -159,7 +163,7 @@ public class progress extends AppCompatActivity {
             public void onClick(View v) {
                 Container4.setVisibility(View.INVISIBLE);
                 Container5.setVisibility(View.VISIBLE);
-
+                active="Moderately Active";
             }
         });
 
@@ -168,7 +172,7 @@ public class progress extends AppCompatActivity {
             public void onClick(View v) {
                 Container4.setVisibility(View.INVISIBLE);
                 Container5.setVisibility(View.VISIBLE);
-
+                active="Very Active";
             }
         });
 
@@ -197,7 +201,7 @@ public class progress extends AppCompatActivity {
         b13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                diet="Energetic Diet";
                 Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);
 
@@ -207,7 +211,7 @@ public class progress extends AppCompatActivity {
         b14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                diet="Low-carb Diet";
                 Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);
 
@@ -217,7 +221,7 @@ public class progress extends AppCompatActivity {
         b15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                diet="Clean Eating";
                 Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);
 
@@ -227,7 +231,7 @@ public class progress extends AppCompatActivity {
         b16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                diet="Monitoring Diet";
                 Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);
 
@@ -237,7 +241,7 @@ public class progress extends AppCompatActivity {
         b17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                diet="Ketogenic Diet";
                 Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);
 
@@ -247,7 +251,7 @@ public class progress extends AppCompatActivity {
         b18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                diet="Pescetarian Diet";
                 Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);
 
@@ -256,6 +260,7 @@ public class progress extends AppCompatActivity {
         b19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                diet="Ketogenic Diet";
 
                 Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);
@@ -266,6 +271,7 @@ public class progress extends AppCompatActivity {
         b20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                diet="Pescetarian Diet";
 
                 Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);

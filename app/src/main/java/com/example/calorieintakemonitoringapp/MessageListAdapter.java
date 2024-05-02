@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import java.util.List;
 
 public class MessageListAdapter extends ArrayAdapter<Message> {
@@ -21,14 +20,14 @@ public class MessageListAdapter extends ArrayAdapter<Message> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View view = convertView;
         if (view == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
             view = inflater.inflate(R.layout.message_list_item, parent, false);
         }
 
-        Message message = messages.get(position);
+        final Message message = messages.get(position);
         if (message != null) {
             TextView senderTextView = view.findViewById(R.id.senderTextView);
             TextView contentTextView = view.findViewById(R.id.contentTextView);

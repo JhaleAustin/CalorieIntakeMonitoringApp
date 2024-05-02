@@ -1,6 +1,9 @@
 package com.example.calorieintakemonitoringapp;
 
-public class Message {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Message implements Parcelable {
     private String sender;
     private String content;
     private String date;
@@ -12,6 +15,25 @@ public class Message {
         this.date = date;
         this.time = time;
     }
+
+    protected Message(Parcel in) {
+        sender = in.readString();
+        content = in.readString();
+        date = in.readString();
+        time = in.readString();
+    }
+
+    public static final Creator<Message> CREATOR = new Creator<Message>() {
+        @Override
+        public Message createFromParcel(Parcel in) {
+            return new Message(in);
+        }
+
+        @Override
+        public Message[] newArray(int size) {
+            return new Message[size];
+        }
+    };
 
     public String getSender() {
         return sender;
@@ -27,5 +49,18 @@ public class Message {
 
     public String getTime() {
         return time;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(sender);
+        dest.writeString(content);
+        dest.writeString(date);
+        dest.writeString(time);
     }
 }
