@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.TextView;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class loadingPage extends AppCompatActivity {
 
@@ -28,11 +26,11 @@ public class loadingPage extends AppCompatActivity {
         // Initialize the trivia text view
         triviaText = findViewById(R.id.triviaText);
 
-        // Create a new Timer
-        Timer timer = new Timer();
+        // Create a handler attached to the main (UI) thread's looper
+        Handler handler = new Handler();
 
-        // Define a TimerTask that will be executed every 15 seconds
-        TimerTask task = new TimerTask() {
+        // Define a Runnable that updates the trivia text and checks if 30 seconds have passed
+        Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 // Update the trivia text
@@ -44,11 +42,14 @@ public class loadingPage extends AppCompatActivity {
                     Intent intent = new Intent(loadingPage.this, Main.class);
                     startActivity(intent);
                     finish();
+                } else {
+                    // Otherwise, schedule the next update after 15 seconds
+                    handler.postDelayed(this, 15000);
                 }
             }
         };
 
-        // Schedule the TimerTask to be executed every 15 seconds
-        timer.schedule(task, 0, 15000);
+        // Schedule the first update after 0 seconds
+        handler.post(runnable);
     }
 }

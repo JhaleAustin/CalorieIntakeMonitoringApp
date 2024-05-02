@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 
 public class progress extends AppCompatActivity {
 
-    Button nextButton, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11,b13,b14,b15,b16,b17,b18,b19,b20;
+    Button nextButton, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11,b12,b13,b14,b15,b16,b17,b18,b19,b20;
     ProgressBar progressBar;
     LinearLayout Container, Container2, Container3, Container4, Container5, Container6, Container7;
 
@@ -53,15 +53,16 @@ public class progress extends AppCompatActivity {
         b9= findViewById(R.id.Button9);
         b10= findViewById(R.id.button10);
         b11= findViewById(R.id.button11);
+        b12= findViewById(R.id.button12);
 
-        b13= findViewById(R.id.Button2);
-        b14= findViewById(R.id.Button3);
-        b15= findViewById(R.id.Button4);
-        b16= findViewById(R.id.Button5);
-        b17= findViewById(R.id.Button6);
-        b18= findViewById(R.id.Button7);
-        b19= findViewById(R.id.Button8);
-        b20= findViewById(R.id.Button9);
+        b13= findViewById(R.id.Button13);
+        b14= findViewById(R.id.Button14);
+        b15= findViewById(R.id.Button15);
+        b16= findViewById(R.id.button16);
+        b17= findViewById(R.id.button17);
+        b18= findViewById(R.id.button18);
+        b19= findViewById(R.id.button19);
+        b20= findViewById(R.id.button20);
 
         // Set onClickListeners for buttons
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -174,10 +175,103 @@ public class progress extends AppCompatActivity {
         b11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(progress.this, Main.class);
+                Container5.setVisibility(View.INVISIBLE);
+                Container6.setVisibility(View.VISIBLE);
+
+//                Intent intent = new Intent(progress.this, Main.class);
+//                startActivity(intent);
+
+            }
+        });
+
+
+        b12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Container6.setVisibility(View.INVISIBLE);
+                Container7.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+        b13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(progress.this, loadingPage.class);
                 startActivity(intent);
 
             }
         });
+
+        b14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(progress.this, loadingPage.class);
+                startActivity(intent);
+
+            }
+        });
+
+        b15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(progress.this, loadingPage.class);
+                startActivity(intent);
+
+            }
+        });
+
+        b16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(progress.this, loadingPage.class);
+                startActivity(intent);
+
+            }
+        });
+
+        b17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(progress.this, loadingPage.class);
+                startActivity(intent);
+
+            }
+        });
+
+        b18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(progress.this, loadingPage.class);
+                startActivity(intent);
+
+            }
+        });
+        b19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(progress.this, loadingPage.class);
+                startActivity(intent);
+
+            }
+        });
+
+        b20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(progress.this, loadingPage.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 }

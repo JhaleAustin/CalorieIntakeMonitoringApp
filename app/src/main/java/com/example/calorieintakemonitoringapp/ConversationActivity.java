@@ -1,38 +1,36 @@
 package com.example.calorieintakemonitoringapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.calorieintakemonitoringapp.MessagesAdapter;
-import com.example.calorieintakemonitoringapp.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ConversationActivity extends AppCompatActivity {
 
-    private RecyclerView messageRecyclerView;
-    private MessagesAdapter messagesAdapter;
+    private TextView senderTextView, contentTextView, dateTextView, timeTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_conversation);
 
-        // Initialize RecyclerView
-        messageRecyclerView = findViewById(R.id.messageRecyclerView);
-        messageRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        senderTextView = findViewById(R.id.senderTextView);
+        contentTextView = findViewById(R.id.contentTextView);
+        dateTextView = findViewById(R.id.dateTextView);
+        timeTextView = findViewById(R.id.timeTextView);
 
-        // Dummy messages for testing
-        List<MessagesAdapter.Message> messages = new ArrayList<>();
-        messages.add(new MessagesAdapter.Message("Hey, are you going to the gym today?", "10:00 AM", "Sender1"));
-        messages.add(new MessagesAdapter.Message("Yes, I'm planning to go around 5 PM.", "10:05 AM", "Sender2"));
-        messages.add(new MessagesAdapter.Message("Great! Let's meet there.", "10:07 AM", "Sender1"));
+        // Retrieve data from intent
+        Intent intent = getIntent();
+        String sender = intent.getStringExtra("sender");
+        String content = intent.getStringExtra("content");
+        String date = intent.getStringExtra("date");
+        String time = intent.getStringExtra("time");
 
-        // Set up adapter
-        messagesAdapter = new MessagesAdapter(messages);
-        messageRecyclerView.setAdapter(messagesAdapter);
+        // Display data in UI
+        senderTextView.setText(sender);
+        contentTextView.setText(content);
+        dateTextView.setText(date);
+        timeTextView.setText(time);
     }
 }
