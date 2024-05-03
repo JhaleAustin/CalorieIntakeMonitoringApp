@@ -14,7 +14,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -167,6 +167,7 @@
             android:layout_width="163dp"
             android:layout_height="111dp"
             android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/app_name"
             android:textColorHighlight="#00FFFFFF"
             android:textColorLink="#00FFFFFF"
             android:textStyle="bold"
@@ -217,6 +218,7 @@
             android:layout_width="163dp"
             android:layout_height="111dp"
             android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/app_name"
             android:textColorHighlight="#00FFFFFF"
             android:textColorLink="#00FFFFFF"
             android:textStyle="bold"

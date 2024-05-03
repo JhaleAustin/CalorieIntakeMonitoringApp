@@ -18,7 +18,7 @@ public class Main extends AppCompatActivity {
         b1 = findViewById(R.id.myButton5);
         b2 = findViewById(R.id.myButton6);
         b3 = findViewById(R.id.myButton3);
-        b4 = findViewById(R.id.myButton4);
+
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,16 +53,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Container.setVisibility(View.INVISIBLE);
-//                Container2.setVisibility(View.VISIBLE);
 
-                Intent intent = new Intent(Main.this, profile.class);
-                startActivity(intent);
-            }
-        });
 
     }
 }
