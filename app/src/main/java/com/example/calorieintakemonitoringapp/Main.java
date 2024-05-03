@@ -18,6 +18,7 @@ public class Main extends AppCompatActivity {
         b1 = findViewById(R.id.myButton5);
         b2 = findViewById(R.id.myButton6);
         b3 = findViewById(R.id.myButton3);
+        b4 = findViewById(R.id.myButton4);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

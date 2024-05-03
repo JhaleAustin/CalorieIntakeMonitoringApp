@@ -14,7 +14,7 @@ public class loadingPage extends AppCompatActivity {
     private String[] triviaTexts = {
             "Did you know? Raspberries are a member of the rose family.",
             "Did you know? Chickpeas and almonds contains almost as much proteins as steaks.",
-            "Did you know? Oreos are vegans.",
+            "Did you know? Oreos are vegan.",
             "Did you know? Pistachios are one of the oldest nuts known to humans."
     };
 

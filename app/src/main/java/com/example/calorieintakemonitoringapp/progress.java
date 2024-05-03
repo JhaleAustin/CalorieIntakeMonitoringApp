@@ -50,7 +50,7 @@ public class progress extends AppCompatActivity {
         b3= findViewById(R.id.Button3);
         b4= findViewById(R.id.Button4);
         b5= findViewById(R.id.Button5);
-        b6= findViewById(R.id.Button6);
+//        b6= findViewById(R.id.Button6);
         b7= findViewById(R.id.Button7);
         b8= findViewById(R.id.Button8);
         b9= findViewById(R.id.Button9);
@@ -129,14 +129,14 @@ public class progress extends AppCompatActivity {
             }
         });
 
-        b6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Container3.setVisibility(View.INVISIBLE);
-                Container4.setVisibility(View.VISIBLE);
-
-            }
-        });
+//        b6.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Container3.setVisibility(View.INVISIBLE);
+//                Container4.setVisibility(View.VISIBLE);
+//
+//            }
+//        });
 
 
 //
